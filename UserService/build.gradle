@@ -27,7 +27,7 @@ dependencies {
 	implementation 'org.springframework.kafka:spring-kafka:2.7.3'
 	implementation group: 'org.springframework.data', name: 'spring-data-mongodb', version: '3.2.2'
 	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb-reactive', version: '2.5.3'
-	// implementation group: 'org.mongodb', name: 'mongodb-driver-async', version: '3.12.10'
+	implementation group: 'org.mongodb', name: 'mongodb-driver-async', version: '3.12.10'
 	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb'
 	compileOnly 'org.projectlombok:lombok:1.18.20'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools:2.5.3'

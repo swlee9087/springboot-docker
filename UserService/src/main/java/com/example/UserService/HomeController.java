@@ -5,10 +5,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-@RestController
+@RestController  //microservice type ctrlr unlike monolithic ctrlr
 public class HomeController {
     @GetMapping("/")
     public String home(){
-        return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
+        return new SimpleDateFormat("yyyy-MM-dd hh:MM:ss").format(new Date());
+        //2 objs into 1
     }
 }

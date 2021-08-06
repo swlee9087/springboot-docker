@@ -1,6 +1,4 @@
-package com.example.UserService.dish;
-
-
+package com.example.UserService.util;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -8,24 +6,22 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
-
 @ExtendWith(MockitoExtension.class)
-class RestaurantTest {
+class MyUtilTest {
     @Mock
-    Restaurant mock;
+    MyUtil myUtil;
     @BeforeEach
-    void setup() {
+    void setup(){
         MockitoAnnotations.initMocks(this);
-        mock = new Restaurant();
+        myUtil = new MyUtil();
     }
-
-    @DisplayName("PUB-SUB 구독 테스트")
-    @Test
-    void test_subscribe() {
-        mock.subscribe();
-    }
+    @DisplayName("Print Current Time")
 
     @Test
-    void subscribe() {
+//    void now() {
+//        System.out.println(myUtil.now());
+//    }
+    void test_usedTime(){
+        System.out.println(myUtil.usedTime("9","30","00","18","00","00"));
     }
 }

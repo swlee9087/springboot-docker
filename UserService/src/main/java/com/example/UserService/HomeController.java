@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @RestController  //microservice type ctrlr unlike monolithic ctrlr
-public class HomeController {
+public final class HomeController {
     @GetMapping("/")
     public String home(){
         return new SimpleDateFormat("yyyy-MM-dd hh:MM:ss").format(new Date());

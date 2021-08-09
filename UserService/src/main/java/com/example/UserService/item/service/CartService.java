@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
 @Service @RequiredArgsConstructor
-public class CartService {
+public final class CartService {
 //    private final ItemRepository itemRepository;
 //    private final CartRepository cartRepository;
 //    Mono<Cart> addToCard(String cartId,String id){

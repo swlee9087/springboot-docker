@@ -12,7 +12,7 @@ class Product{
     private final int productId;
     private final String description;   //final = no more changes allowed
 }
-public class ObjectArray {
+public final class ObjectArray {
     public Product[] createCart(){
         Product[] cart = new Product[5];
         String[] productNames={"Coffee", "Computer","Apple","Dress","Fairytale Book"};

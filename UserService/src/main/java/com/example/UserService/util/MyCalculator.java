@@ -1,6 +1,6 @@
 package com.example.UserService.util;
 
-public class MyCalculator {
+public final class MyCalculator {
     public String plus(int a, int b){
         return String.valueOf(a+b);
     }

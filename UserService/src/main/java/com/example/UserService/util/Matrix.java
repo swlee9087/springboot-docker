@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class Matrix {
+public final class Matrix {
     public int[][] createMatrix(int row, int col) {
 //        int[][]matrix = new int[row][col];
 //        int k=1;

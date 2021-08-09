@@ -9,7 +9,7 @@ import java.util.Date;
 
 // practice. --> MyUtilTest
 
-public class MyUtil {
+public final class MyUtil {
 //    public String now(){
 //        return new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date());
 //    }

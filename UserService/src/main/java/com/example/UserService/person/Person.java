@@ -5,7 +5,7 @@ import lombok.Data;
 //gsttr로 이뤄진 dto객체를 어떻게????
 
 @Data
-public class Person {
+public final class Person {
     private String regiNum;
     private String passNum;
 

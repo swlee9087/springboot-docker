@@ -30,6 +30,7 @@ dependencies {
 	implementation group: 'org.mongodb', name: 'mongodb-driver-async', version: '3.12.10'
 	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb'
 	compileOnly 'org.projectlombok:lombok:1.18.20'
+	annotationProcessor("org.projectlombok:lombok")
 	developmentOnly 'org.springframework.boot:spring-boot-devtools:2.5.3'
 	runtimeOnly 'com.h2database:h2:1.4.200'
 	runtimeOnly 'dev.miku:r2dbc-mysql:0.8.2.RELEASE'

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 
 @Data
-class Dish{
+final class Dish{
     private String description;
     private boolean delivered = false;
     public static Dish deliver(Dish dish){
@@ -28,13 +28,13 @@ class Dish{
         return delivered;
     }
     @Override
-    public String toString(){
+    public final String toString(){
         return "Dish{ description='"+description+'\''+", delivered="+delivered+'}';
         //return delivered ? description+" eaten" : description +" waiting for it";
     }
 }
 @Service  //add this to let USA refresh
-class KitchenService{
+final class KitchenService{
     Flux<Dish> getDishes(){
         return Flux.just(
                 new Dish("Super Supreme Comination Pizza"),
@@ -47,7 +47,7 @@ class KitchenService{
 }
 
 @RequiredArgsConstructor
-class SimpleServer{
+final class SimpleServer{
     private final KitchenService kitchen;
     Flux<Dish> doingMyJob(){
         return this.kitchen.getDishes().map(dish -> Dish.deliver(dish));
@@ -56,7 +56,7 @@ class SimpleServer{
 }
 
 @RequiredArgsConstructor
-class PoliteServer{
+final class PoliteServer{
     private final KitchenService kitchen;
     Flux<Dish> doingMyJob(){
         return this.kitchen.getDishes()
@@ -67,7 +67,7 @@ class PoliteServer{
     }
 }
 
-public class Restaurant {
+public final class Restaurant {
     public void subscribe(){
         PoliteServer server=new PoliteServer(new KitchenService());
         server.doingMyJob().subscribe(
